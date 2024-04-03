@@ -1,13 +1,6 @@
 #include <bits/stdc++.h>
 
-#define fast ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL);
-#define el '\n'
-#define ll  long long
-#define ld  long double
-#define all(x) x.begin(), x.end()
-#define yes "YES\n"
-#define no "NO\n"
-#define test int test;cin>>test;while(test--)
+
 using namespace std;
 
 void merge(int arr[], int l, int m, int r) {
@@ -54,7 +47,6 @@ void mergeSort(int a[], int l, int r) {
 }
 
 int main() {
-    fast
     int n;
     cin >> n;
     int a[n];
