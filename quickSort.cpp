@@ -1,10 +1,11 @@
 #include <bits/stdc++.h>
+#define ll long long
 
 
 using namespace std;
 
 
-void quickSort(int arr[], int l, int r) {
+void quickSort(ll arr[], int l, int r) {
     if (l >= r) return;
     int mid = (l + r) / 2;
     int pivot = arr[mid];
@@ -25,7 +26,7 @@ void quickSort(int arr[], int l, int r) {
 int main() {
     int n;
     cin >> n;
-    int arr[n];
+    ll arr[n];
     cout << "Original array: ";
     for (int i = 0; i < n; ++i) {
         cin >> arr[i];
