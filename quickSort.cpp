@@ -24,6 +24,7 @@ void quickSort(ll arr[], int l, int r) {
 }
 
 int main() {
+    cout<<"Array size: ";
     int n;
     cin >> n;
     ll arr[n];
@@ -31,10 +32,11 @@ int main() {
     for (int i = 0; i < n; ++i) {
         cin >> arr[i];
     }
+    
+    cout << "Sorted array: ";
 
     quickSort(arr, 0, n);
 
-    cout << "Sorted array: ";
     for (int i = 0; i < n; ++i) cout << arr[i] << ' ';
     cout << '\n';
 
