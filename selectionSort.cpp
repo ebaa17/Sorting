@@ -1,9 +1,10 @@
 #include <bits/stdc++.h>
+#define ll long long
 
 
 using namespace std;
 
-void selectionSort(int a[], int n) {
+void selectionSort(ll a[], int n) {
     for (int i = 0, j, least; i < n; ++i) {
         for (j= i+1, least = i; j < n; ++j)
             if (a[least]>a[j]) least = j;
@@ -15,7 +16,7 @@ void selectionSort(int a[], int n) {
 int main() {
     int n;
     cin >> n;
-    int a[n];
+    ll a[n];
     for (int i = 0; i < n; ++i) {
         cin >> a[i];
     }
