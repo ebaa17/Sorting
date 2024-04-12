@@ -1,9 +1,10 @@
 #include <bits/stdc++.h>
+#define ll long long
 
 
 using namespace std;
 
-void merge(int arr[], int l, int m, int r) {
+void merge(ll arr[], int l, int m, int r) {
     int i = 0, j = 0, k = l
     , n1 = m - l + 1
     , n2 = r - m;
@@ -37,7 +38,7 @@ void merge(int arr[], int l, int m, int r) {
 
 }
 
-void mergeSort(int a[], int l, int r) {
+void mergeSort(ll a[], int l, int r) {
     if (l >= r)
         return;
     int mid = l + (r - l) / 2;
@@ -49,7 +50,7 @@ void mergeSort(int a[], int l, int r) {
 int main() {
     int n;
     cin >> n;
-    int a[n];
+    ll a[n];
     for (int i = 0; i < n; ++i) {
         cin>>a[i];
     }
