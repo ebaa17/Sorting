@@ -14,12 +14,16 @@ void selectionSort(ll a[], int n) {
 }
 
 int main() {
+    cout<<"Array size: ";
     int n;
     cin >> n;
-    ll a[n];
+    ll arr[n];
+    cout << "Original array: ";
     for (int i = 0; i < n; ++i) {
-        cin >> a[i];
+        cin >> arr[i];
     }
+
+    cout << "Sorted array: ";
     selectionSort(a,n);
     for (int x:a)
         cout<<x<<' ';
