@@ -8,7 +8,7 @@ using namespace std;
 void quickSort(ll arr[], int l, int r) {
     if (l >= r) return;
     int mid = (l + r) / 2;
-    int pivot = arr[mid];
+    ll pivot = arr[mid];
     int low = l, high = r;
     while (low <= high) {
         while (arr[low] < pivot) ++low;
@@ -32,7 +32,7 @@ int main() {
     for (int i = 0; i < n; ++i) {
         cin >> arr[i];
     }
-    
+
     cout << "Sorted array: ";
 
     quickSort(arr, 0, n);
