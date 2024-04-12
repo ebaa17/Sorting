@@ -48,12 +48,16 @@ void mergeSort(ll a[], int l, int r) {
 }
 
 int main() {
+    cout<<"Array size: ";
     int n;
     cin >> n;
-    ll a[n];
+    ll arr[n];
+    cout << "Original array: ";
     for (int i = 0; i < n; ++i) {
-        cin>>a[i];
+        cin >> arr[i];
     }
+
+    cout << "Sorted array: ";
     mergeSort(a,0,n-1);
     for (int i: a) cout << i << ' ';
 }
