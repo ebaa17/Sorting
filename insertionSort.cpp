@@ -1,10 +1,11 @@
 #include <bits/stdc++.h>
+#define ll long long
 
 
 using namespace std;
 
 
-void insertionSort(int arr[], int n) {
+void insertionSort(ll arr[], int n) {
     for (int i = 0, j; i < n; ++i) {
         int tmp = arr[i];
         for (j = i; j > 0 && tmp < arr[j - 1]; --j)
@@ -17,7 +18,7 @@ void insertionSort(int arr[], int n) {
 int main() {
     int n;
     cin >> n;
-    int a[n];
+    ll a[n];
     for (int i = 0; i < n; ++i) {
         cin >> a[i];
     }
