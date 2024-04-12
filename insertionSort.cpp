@@ -7,7 +7,7 @@ using namespace std;
 
 void insertionSort(ll arr[], int n) {
     for (int i = 0, j; i < n; ++i) {
-        int tmp = arr[i];
+        ll tmp = arr[i];
         for (j = i; j > 0 && tmp < arr[j - 1]; --j)
             arr[j] = arr[j - 1];
         arr[j] = tmp;
