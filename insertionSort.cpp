@@ -16,12 +16,16 @@ void insertionSort(ll arr[], int n) {
 }
 
 int main() {
+    cout<<"Array size: ";
     int n;
     cin >> n;
-    ll a[n];
+    ll arr[n];
+    cout << "Original array: ";
     for (int i = 0; i < n; ++i) {
-        cin >> a[i];
+        cin >> arr[i];
     }
+
+    cout << "Sorted array: ";
     insertionSort(a, n);
     for (int i: a) cout << i << ' ';
 }
