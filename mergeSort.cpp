@@ -8,7 +8,7 @@ void merge(ll arr[], int l, int m, int r) {
     int i = 0, j = 0, k = l
     , n1 = m - l + 1
     , n2 = r - m;
-    int L[n1], R[n2];
+    ll L[n1], R[n2];
     for (int x = 0; x < n1; ++x) {
         L[x] = arr[l + x];
     }
@@ -58,8 +58,7 @@ int main() {
     }
 
     cout << "Sorted array: ";
-    mergeSort(a,0,n-1);
-    for (int i: a) cout << i << ' ';
+    mergeSort(arr,0,n-1);
+    for (int i: arr) cout << i << ' ';
 }
-
 
