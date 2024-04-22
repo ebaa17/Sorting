@@ -24,8 +24,8 @@ int main() {
     }
 
     cout << "Sorted array: ";
-    selectionSort(a,n);
-    for (int x:a)
+    selectionSort(arr,n);
+    for (int x:arr)
         cout<<x<<' ';
 
 }
