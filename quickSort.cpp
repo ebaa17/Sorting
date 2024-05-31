@@ -1,46 +1,33 @@
 #include <bits/stdc++.h>
-#define ll long long
-
-
 using namespace std;
 
-
-void quickSort(ll arr[], int l, int r) {
-    if (l >= r) return;
-    int mid = (l + r) / 2;
-    ll pivot = arr[mid];
-    int low = l, high = r;
-    while (low <= high) {
-        while (arr[low] < pivot) ++low;
-        while (arr[high] > pivot) --high;
-        if (low <= high) {
-            swap(arr[low], arr[high]);
-            ++low;
-            --high;
-        }
+int partition (vector<int>& v, int l, int r){
+    int i = l;
+    for (int j = i+1; j <= r; ++j) {
+        if(v[j]<v[l])
+            swap(v[j], v[++i]);
     }
-    quickSort(arr, l, high);
-    quickSort(arr, low, r);
+    swap(v[l], v[i]);
+    return i;
 }
+
+void quickSort(vector<int>& v, int l, int r){
+    if(l>=r)
+        return;
+    int mid = partition(v, l, r);
+    quickSort(v, l, mid - 1);
+    quickSort(v, mid + 1, r);
+}
+
 
 int main() {
-    cout<<"Array size: ";
     int n;
-    cin >> n;
-    ll arr[n];
-    cout << "Original array: ";
+    cin>>n;
+    vector<int> v(n);
     for (int i = 0; i < n; ++i) {
-        cin >> arr[i];
+        cin>>v[i];
     }
-
-    cout << "Sorted array: ";
-
-    quickSort(arr, 0, n);
-
-    for (int i = 0; i < n; ++i) cout << arr[i] << ' ';
-    cout << '\n';
-
-    return 0;
+    quickSort(v,0,n-1);
+    for (int x:v) cout<<x<<' ';
 }
-
 
