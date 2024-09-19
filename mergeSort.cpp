@@ -38,6 +38,9 @@ void merge(ll arr[], int l, int m, int r) {
 
 }
 
+// make sure r is also accessible in the array, work 0-based
+// if size is n, pass l = 0, r = n-1
+
 void mergeSort(ll a[], int l, int r) {
     if (l >= r)
         return;
